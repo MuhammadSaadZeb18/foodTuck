@@ -1,0 +1,30 @@
+.checks ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.checks ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.noncheck {
+  padding: 1rem;
+  background-color: #edeae3;
+  cursor: pointer;
+  color: black;
+}
+.checked {
+  padding: 1rem;
+  background-color: #bc9a6c;
+  color: #edeae3;
+  cursor: pointer;
+}
+
+.checks h4 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 26px;
+  color: #4f4f4f;
+}

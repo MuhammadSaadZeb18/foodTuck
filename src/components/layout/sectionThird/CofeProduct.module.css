@@ -1,0 +1,14 @@
+.cofeProduct {
+  display: flex;
+  align-items: center;
+}
+
+.cofeProduct p {
+  color: #4f4f4f;
+  @media (max-width: 800px) {
+    line-height: 16px;
+  }
+}
+.cofeProduct h4 {
+  color: #4f4f4f;
+}

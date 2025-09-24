@@ -1,0 +1,120 @@
+/* Products Styling */
+.productsLayout {
+  /* width: 70%; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  gap: 2rem;
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 650px) {
+    grid-template-columns: 1fr;
+  }
+  margin-top: 4rem;
+}
+/* .shopLayout {
+  display: flex;
+} */
+/* Product Styling */
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2.4rem;
+  /* padding: 2rem 3rem; */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  @media (max-width: 650px) {
+    grid-template-columns: 1fr;
+    height: 40rem;
+    width: 50rem;
+  }
+  @media (max-width: 500px) {
+    height: 40rem;
+    width: 35rem;
+  }
+}
+.product img {
+  height: 27rem;
+  width: 31rem;
+  @media (max-width: 650px) {
+    width: 100%;
+  }
+}
+.productConent {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.product h2 {
+  font-weight: 700;
+  font-family: "inter" !important;
+  font-size: 1.8rem;
+  color: #333333;
+  text-transform: capitalize;
+}
+.product p {
+  font-weight: 400;
+  font-family: "inter" !important;
+  font-size: 1.6rem !important;
+  color: #ff9f0d;
+  font-weight: 400;
+}
+.product span {
+  font-size: 1.6rem;
+  color: #828282;
+  text-decoration: line-through;
+  font-weight: 400;
+  margin-left: 1rem;
+}
+.links {
+  text-decoration: none;
+}
+
+.sortBox {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.sortBox label {
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #333333;
+}
+.sortBox select {
+  border: 1px solid #e0e0e0;
+  width: 300px;
+  height: 40px;
+  font-size: 1.7rem;
+  color: #bdbdbd;
+}
+.sortBox option {
+  font-size: 1.3rem;
+  color: #333333;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  /* background: #fff; */
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+  height: 50px;
+  width: 50px;
+  font-size: 1.8rem;
+}
+
+.activePage {
+  background-color: #ff9f0d;
+  color: #fff;
+}

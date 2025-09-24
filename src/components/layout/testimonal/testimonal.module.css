@@ -1,0 +1,66 @@
+.testimonal {
+  display: flex;
+  align-items: stretch; /* ✅ make both text & video equal height */
+  gap: 0; /* optional, remove gap if you want seamless layout */
+  height: 60rem;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../assets/testiBg.png");
+  color: #fff !important ;
+  padding: 3rem;
+  flex-basis: 50%; /* half width */
+  flex-grow: 1; /* ✅ stretch equally with video */
+}
+
+.video {
+  flex-basis: 50%;
+  flex-grow: 1; /* ✅ stretch equally with text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video video {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  @media (max-width: 900px) {
+    height: 45rem;
+  }
+}
+
+/* Typography */
+.text h2 {
+  color: #fff;
+  text-align: center;
+}
+
+.text p {
+  color: #fff !important;
+  font-weight: 400;
+  font-family: "inter";
+  text-align: center;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1000px) {
+  .text h2 {
+    font-size: 3rem;
+  }
+  .text p {
+    font-size: 1.4rem;
+  }
+}

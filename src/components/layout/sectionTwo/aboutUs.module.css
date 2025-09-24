@@ -1,0 +1,38 @@
+.layout {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 4rem;
+  @media (max-width: 1000px) {
+    flex-direction: column-reverse;
+  }
+}
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-basis: 60%;
+}
+
+.learnMore {
+  padding: 1.4rem 4rem;
+  background-color: #bc9a6c;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+  font-size: 1.8rem;
+  font-family: Helvetica;
+  width: fit-content;
+  border-radius: 6px;
+  margin: 2rem 0;
+}
+
+.text p {
+  color: #4f4f4f;
+}

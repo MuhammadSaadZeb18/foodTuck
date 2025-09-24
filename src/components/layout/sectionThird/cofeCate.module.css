@@ -1,0 +1,24 @@
+.cofeCategoryLayout {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  gap: 1rem;
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+ 
+    justify-items: center;
+  }
+}
+
+.cofesWraper {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  @media (max-width: 1000px) {
+    gap: 0rem;
+  }
+}
+.cofeBigImg {
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}

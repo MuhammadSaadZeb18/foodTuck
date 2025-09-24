@@ -1,0 +1,14 @@
+.brands {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+  margin-bottom: 5rem;
+  flex-wrap: wrap;
+  /* @media (max-width: 900px) {
+    flex-wrap: wrap;
+  } */
+}
+
+.brandImg {
+  height: 130px;
+}
