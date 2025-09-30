@@ -52,7 +52,7 @@ const ProductDetail = () => {
         <div className={classes.imgsBox}>
           {/* 🟢 Show selected image as big one */}
           <img
-            className={classes.prodcutImage}
+            className={`${classes.prodcutImage}  rounded-lg`}
             src={selectedImg}
             alt={product.name}
           />
@@ -99,13 +99,12 @@ const ProductDetail = () => {
                 <button className={classes.cart} onClick={addHandler}>
                   Add to cart
                 </button>
-             
               </div>
             </div>
           </div>
         </div>
       </div>
-      <Slider product={product} />
+      {/* <Slider product={product} /> */}
     </>
   );
 };

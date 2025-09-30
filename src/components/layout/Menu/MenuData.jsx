@@ -76,14 +76,6 @@ export const drinksMenu = [
 
 export const dessertMenu = [
   {
-    id: 9,
-    name: "Fig and lemon cake",
-    description: "Moist cake with figs and lemon glaze.",
-    calories: 560,
-    price: 32,
-    image: "https://images.pexels.com/photos/302680/pexels-photo-302680.jpeg",
-  },
-  {
     id: 10,
     name: "Creamy mascarpone cake",
     description: "Layered cake with mascarpone cream.",
@@ -108,27 +100,18 @@ export const dessertMenu = [
     price: 35,
     image: "https://images.pexels.com/photos/461428/pexels-photo-461428.jpeg",
   },
+  {
+    id: 65,
+    name: "Vegetables & Green Salad",
+    description: "Fresh greens with cucumbers, tomatoes, and vinaigrette.",
+    calories: 1000,
+    price: 14,
+    oldPrice: 40,
+    image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg",
+  },
 ];
 
 export const starterMenu = [
-  {
-    id: 1,
-    name: "Alder Grilled Chinook Salmon",
-    description: "French bread with cheddar and grilled salmon.",
-    calories: 560,
-    price: 32,
-    image:
-      "https://images.pexels.com/photos/45260/salmon-dish-food-healthy-45260.jpeg",
-  },
-  {
-    id: 2,
-    name: "Berries and creme tart",
-    description: "Crisp tart with mascarpone cream and berries.",
-    calories: 700,
-    price: 43,
-    image: "https://images.pexels.com/photos/302680/pexels-photo-302680.jpeg",
-  },
-
   {
     id: 4,
     name: "Spicy Vegan Potato Curry",
@@ -137,5 +120,32 @@ export const starterMenu = [
     price: 35,
     oldPrice: 40,
     image: "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg",
+  },
+  {
+    id: 355,
+    name: "Vegetables & Green Salad",
+    description: "Fresh greens with cucumbers, tomatoes, and vinaigrette.",
+    calories: 1000,
+    price: 14,
+    oldPrice: 40,
+    image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg",
+  },
+  {
+    id: 462,
+    name: "Spicy Vegan Potato Curry",
+    description: "Spiced potatoes in creamy curry sauce with rice.",
+    calories: 560,
+    price: 35,
+    oldPrice: 40,
+    image: "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg",
+  },
+  {
+    id: 12,
+    name: "Pain au chocolat",
+    description: "Flaky pastry with rich dark chocolate.",
+    calories: 560,
+    oldPrice: 40,
+    price: 35,
+    image: "https://images.pexels.com/photos/461428/pexels-photo-461428.jpeg",
   },
 ];

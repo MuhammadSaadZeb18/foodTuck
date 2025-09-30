@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className={classes.footer}>
       <Container>
         {/* Newsletter Section */}
-        <div className={classes.newsletter}>
+        <div className={`${classes.newsletter} border_radious`}>
           <h2 className={classes.titles}>
             <span>Sti</span>ll You Need Our Support ?
           </h2>
@@ -37,9 +37,9 @@ const Footer = () => {
               <div className={classes.icon}>⏲</div>
               <div>
                 <p>Opening Hours</p>
-                <span>Mon - Sat (8.00 - 6.00)</span>
+                <span className="text-white">Mon - Sat (8.00 - 6.00)</span>
                 <br />
-                <span>Sunday - Closed</span>
+                <span className="text-gray-400">Sunday - Closed</span>
               </div>
             </div>
           </div>
@@ -122,7 +122,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className={classes.bottom}>
+        <div className={`${classes.bottom} rounded-lg`}>
           <p>Copyright © 2022 by Ayeman. All Rights Reserved.</p>
         </div>
       </Container>

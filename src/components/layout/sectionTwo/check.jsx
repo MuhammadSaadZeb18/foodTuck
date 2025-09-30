@@ -13,7 +13,7 @@ const Check = () => {
             onClick={() => setIsChecked1(!checked1)}
             className={
               checked1
-                ? "material-symbols-outlined checked"
+                ? "material-symbols-outlined  checked"
                 : "material-symbols-outlined noncheck"
             }
           >

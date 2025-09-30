@@ -7,7 +7,7 @@ const CofeMaker = () => {
       {cofeMakerObj.map((_, index) => (
         <div className="flex gap-x-[2rem]   items-center">
           <div>
-            <img src={cofeMaker} />
+            <img src={cofeMaker} className="border_radious" />
           </div>
           <div className="flex flex-col gap-y-3">
             <h5>High quality coffee</h5>

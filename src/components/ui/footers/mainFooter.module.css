@@ -8,18 +8,15 @@
   /* background-color: #333; */
   margin-top: 10rem;
 
-
   /* position: relative; */
 }
 
 .bg {
-  background: url("../../../assets/footer.png");
+  background: url("../../../assets/fbg.png");
   background-repeat: no-repeat;
-    @media (max-width: 1000px) {
-   
+  @media (max-width: 1000px) {
     background-size: cover;
   }
-
 }
 /* Newsletter */
 .newsletter {

@@ -13,6 +13,7 @@ const Hero = () => {
         <div className={classes.heroLayout} id="aboutSec">
           <div className={classes.heroText}>
             <p
+              className="rounded-r-2xl"
               style={{
                 display: "flex",
                 gap: "1rem",
@@ -29,9 +30,11 @@ const Hero = () => {
               sed pharetra dictum neque massa conguei?
             </p>
             <div className={classes.actions}>
-              <button className={classes.special}>order now</button>
+              <button className={`${classes.special} + rounded-lg`}>
+                order now
+              </button>
               <Link to={"/menu"}>
-                <button>see menu</button>
+                <button className={`rounded-lg`}>see menu</button>
               </Link>
             </div>
           </div>

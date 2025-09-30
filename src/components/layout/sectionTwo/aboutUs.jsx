@@ -6,7 +6,7 @@ import classes from "../../layout/sectionTwo/aboutUs.module.css";
 const AboutUs = (props) => {
   return (
     <Container>
-      <section className={classes.layout} >
+      <section className={classes.layout}>
         <div className={classes.imgBox}>
           <img className={classes.img} src={props.mainImg} />
         </div>
@@ -21,7 +21,9 @@ const AboutUs = (props) => {
             eu velit in consequat.
           </p>
           {props.isAbout ? <Check /> : <CofeMaker />}
-          <button className={classes.learnMore}>Learn More</button>
+          <button className={`${classes.learnMore} rounded-lg`}>
+            Learn More
+          </button>
         </div>
       </section>
     </Container>

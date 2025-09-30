@@ -16,9 +16,9 @@ const BlogCard = ({ img, title, aut }) => {
 
   return (
     <div
-      className={`${classes.blogCard} relative flex flex-col gap-y-4 md:gap-y-7  mb-16 w-[100%]  md:w-[65%]  shadow-2xl cursor-pointer  `}
+      className={`${classes.blogCard} rounded-lg relative flex flex-col gap-y-4 md:gap-y-7  mb-16 w-[100%]  md:w-[65%]  shadow-2xl cursor-pointer  `}
     >
-      <img src={img} className="w-full" />
+      <img src={img} className="w-full rounded-lg" />
       <div className="flex items-center gap-x-5 ">
         <div className="flex items-center gap-x-3 ">
           <img src={calender} className="w-[24px] h-[24px]" />
@@ -38,9 +38,9 @@ const BlogCard = ({ img, title, aut }) => {
       </p>
 
       <div
-        className={`bg-[#FF9F0D] text-white  absolute top-8"  ${classes.dateBox}`}
+        className={`bg-[#FF9F0D] rounded-b-xl text-white  absolute top-8"  ${classes.dateBox}`}
       >
-        <p className="px-11">{formattedEdit}</p>
+        <p>{formattedEdit}</p>
       </div>
     </div>
   );

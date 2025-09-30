@@ -62,24 +62,31 @@ const Shop = () => {
 
   return (
     <div>
-      <div className={classes.sortBox}>
-        <label htmlFor="price">Sort by:</label>
-        <select
-          id="price"
-          value={sortOrder}
-          onChange={(e) => {
-            setSortOrder(e.target.value);
-            setCurrentPage(1);
-          }}
-        >
-          <option value="low-high">Price: Low to High</option>
-          <option value="high-low">Price: High to Low</option>
-          <option value="ascending">Name: A–Z</option>
-          <option value="descending">Name: Z–A</option>
-        </select>
+      <div className={classes.content}>
+        <div>
+          <div className={classes.sortBox}>
+            <label htmlFor="price">Sort by:</label>
+            <select
+              id="price"
+              value={sortOrder}
+              onChange={(e) => {
+                setSortOrder(e.target.value);
+                setCurrentPage(1);
+              }}
+            >
+              <option value="low-high">Price: Low to High</option>
+              <option value="high-low">Price: High to Low</option>
+              <option value="ascending">Name: A–Z</option>
+              <option value="descending">Name: Z–A</option>
+            </select>
+          </div>
+          <ShopProducts products={currentProducts} />
+          <div className={classes.pagination}>{renderPagination()}</div>
+        </div>
+        <div className="basis-[25%]">
+          <SideBar />
+        </div>
       </div>
-      <ShopProducts products={currentProducts} />=
-      <div className={classes.pagination}>{renderPagination()}</div>
     </div>
   );
 };

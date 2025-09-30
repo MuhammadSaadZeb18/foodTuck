@@ -142,3 +142,18 @@ h6 {
 .activePage {
   color: #ff9f0d !important;
 }
+
+/* .border_radious {
+  border-radius: 12px;
+} */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.margin {
+  margin: 0 auto;
+}

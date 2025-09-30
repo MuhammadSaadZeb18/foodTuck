@@ -9,7 +9,7 @@ const MainFooter = () => {
       <footer className={classes.footer}>
         <div className={classes.bg}>
           <Container>
-            <div className={classes.newsletter}>
+            <div className={`${classes.newsletter} rounded-lg`}>
               <h2>
                 Subscribe <br /> To Our Newsletter
               </h2>

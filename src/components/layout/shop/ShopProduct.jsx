@@ -3,9 +3,9 @@ import React from "react";
 
 const ShopProduct = ({ name, img, price, oldPrice }) => {
   return (
-    <li className={classes.product}>
+    <li className={`${classes.product} rounded-lg`}>
       <div>
-        <img src={img} />
+        <img src={img} className="rounded-lg" alt={name} />
       </div>
       <div className={classes.productConent}>
         <h2>{name}</h2>

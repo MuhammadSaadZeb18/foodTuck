@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import classes from "../../layout/slider/slider.module.css";
+import React, { useRef, useEffect, useState } from "react";
 import leftImg from "../../../assets/icons/left.png";
 import rightImg from "../../../assets/icons/right.png";
 import ShopProduct from "../shop/ShopProduct";
 import Center from "../../ui/Center";
+
 import {
   starterMenu,
   mainCourseMenu,
@@ -18,71 +18,60 @@ const Slider = () => {
     ...dessertMenu,
     ...drinksMenu,
   ];
-
-  const [startIndex, setStartIndex] = useState(0);
-  const [itemsPerPage, setItemsPerPage] = useState(3);
-
-  // ✅ Update itemsPerPage based on screen size
-  useEffect(() => {
-    const updateItems = () => {
-      if (window.innerWidth <= 640) {
-        setItemsPerPage(1); // mobile
-      } else {
-        setItemsPerPage(3); // desktop/tablet
-      }
-    };
-
-    updateItems(); // run on mount
-    window.addEventListener("resize", updateItems);
-
-    return () => window.removeEventListener("resize", updateItems);
-  }, []);
-
-  const visibleProducts = allMenu.slice(startIndex, startIndex + itemsPerPage);
+  const elementRef = useRef(null);
 
   const handlePrev = () => {
-    if (startIndex > 0) {
-      setStartIndex(startIndex - itemsPerPage);
+    if (elementRef.current) {
+      const width = elementRef.current.offsetWidth;
+      elementRef.current.scrollLeft -= width;
     }
   };
 
   const handleNext = () => {
-    if (startIndex + itemsPerPage < allMenu.length) {
-      setStartIndex(startIndex + itemsPerPage);
+    if (elementRef.current) {
+      const width = elementRef.current.offsetWidth;
+      elementRef.current.scrollLeft += width;
     }
   };
 
   return (
-    <>
-      <div className={classes.top}>
+    <div className="flex-col w-[85%] margin">
+      <div className="mb-4">
         <Center>
-          <h4>Similar Products</h4>
-          <div className={classes.actions}>
-            <button onClick={handlePrev} disabled={startIndex === 0}>
-              <img src={leftImg} alt="Prev" />
+          <h4 className="text-lg font-semibold">Similar Products</h4>
+          <div className="flex justify-between">
+            <button
+              onClick={handlePrev}
+              className="cursor-pointer p-2 rounded-full"
+            >
+              <img src={leftImg} alt="Prev" className="w-10 h-10" />
             </button>
             <button
               onClick={handleNext}
-              disabled={startIndex + itemsPerPage >= allMenu.length}
+              className="cursor-pointer p-2 rounded-full"
             >
-              <img src={rightImg} alt="Next" />
+              <img src={rightImg} alt="Next" className="w-10 h-10" />
             </button>
           </div>
         </Center>
       </div>
 
-      <div className={classes.products}>
-        {visibleProducts.map((product, index) => (
-          <ShopProduct
-            key={index}
-            img={product.image}
-            name={product.name}
-            oldPrice={product.oldPrice}
-            price={product.price}
-          />
+      <div
+        ref={elementRef}
+        className="flex overflow-x-auto scroll-smooth gap-6 px-2 no-scrollbar"
+      >
+        {allMenu.map((product, index) => (
+          <div key={index}>
+            <ShopProduct
+              img={product.image}
+              name={product.name}
+              oldPrice={product.oldPrice}
+              price={product.price}
+            />
+          </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

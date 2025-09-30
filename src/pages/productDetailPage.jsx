@@ -3,6 +3,7 @@ import Container from "../components/ui/container";
 import ProductDetail from "../components/layout/Menu/ProductDetail";
 import Footer from "../components/ui/footers/Footer";
 import React from "react";
+import Slider from "../components/layout/slider/Slider";
 
 const heroConent = {
   title: "Our Product",
@@ -24,6 +25,7 @@ const ProductDetailPage = () => {
       <Container>
         <ProductDetail />
       </Container>
+      <Slider />
       <Footer />
     </>
   );

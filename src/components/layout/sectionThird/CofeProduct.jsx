@@ -5,7 +5,7 @@ const CofeProduct = (props) => {
   return (
     <li className={classes.cofeProduct}>
       <div>
-        <img className={classes.smallImg} src={img} />
+        <img className={`${classes.smallImg} border_radious`} src={img} />
       </div>
       <div>
         <h4>{props.title}</h4>

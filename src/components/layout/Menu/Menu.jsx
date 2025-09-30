@@ -30,7 +30,10 @@ const Menu = () => {
           key={i}
           className={i % 2 === 0 ? classes.flexo : classes.flexReverse} // alternate layout
         >
-          <img className={classes.productsImg} src={section.img} />
+          <img
+            className={`${classes.productsImg} rounded-lg`}
+            src={section.img}
+          />
           <div className={classes.products}>
             <img src={cofe} />
             <h2>{section.title}</h2>

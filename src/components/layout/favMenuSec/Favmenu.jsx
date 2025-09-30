@@ -26,13 +26,15 @@ const Favmenu = () => {
         </p>
       </Center>
 
-      <div id="footer" className={`${classes.layout} `}>
+      <div className={`${classes.layout} `}>
         {/* Sidebar list (desktop only) */}
-        <ul className={`${classes.categories} ${classes.desktopOnly} `}>
+        <ul
+          className={`${classes.categories} ${classes.desktopOnly} rounded-lg  `}
+        >
           {categories.map((category, index) => (
             <button
               key={index}
-              className={`${classes.categore} ${
+              className={`${classes.categore} rounded-lg ${
                 selectedCategory === category ? classes.active : ""
               }`}
               onClick={() => setSelectedCategory(category)}

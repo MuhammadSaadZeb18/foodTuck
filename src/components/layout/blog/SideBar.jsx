@@ -95,7 +95,7 @@ const Sidebar = () => {
       </div>
 
       {/* Author */}
-      <div className={classes.authorCard}>
+      <div className={`${classes.authorCard}  rounded-lg `}>
         <img src={authorImg} alt="Author" className={classes.authorImg} />
         <h3>Prince Miyako</h3>
         <p>Blogger/Photographer</p>
@@ -107,7 +107,7 @@ const Sidebar = () => {
       </div>
 
       {/* Recent Posts */}
-      <div className={classes.widget}>
+      <div className={`${classes.widget}  rounded-lg`}>
         <h4>Recent Post</h4>
         <div className={classes.recentposts}>
           {recentPosts.map((post) => (
@@ -123,7 +123,7 @@ const Sidebar = () => {
       </div>
 
       {/* Categories */}
-      <div className={classes.widget}>
+      <div className={`${classes.widget}  rounded-lg`}>
         <h4>Filter By Menu</h4>
         {categories.map((cat) => (
           <div key={cat.id} className={classes.category}>
@@ -135,9 +135,9 @@ const Sidebar = () => {
       </div>
 
       {/* Tags */}
-      <div className={classes.widget}>
+      <div className={`${classes.widget}  rounded-lg`}>
         <h4>Popular Tags</h4>
-        <div className={classes.tags}>
+        <div className={`${classes.tags} rounded-lg`}>
           {tags.map((tag, i) => (
             <span key={i} className={classes.tag}>
               {tag}
@@ -147,7 +147,7 @@ const Sidebar = () => {
       </div>
 
       {/* Gallery */}
-      <div className={classes.widget}>
+      <div className={`${classes.widget}  rounded-lg`}>
         <h4 className="text-center">Photo Gallery</h4>
         <div className={classes.gallery}>
           {gallery.map((img, i) => (

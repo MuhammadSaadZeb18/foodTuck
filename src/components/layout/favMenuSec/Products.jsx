@@ -4,15 +4,20 @@ import { products } from "./ProductData";
 import React from "react";
 export function ProductCard({ product }) {
   return (
-    <li className={classes.menu}>
+    <li className={`${classes.menu} rounded-lg `}>
       <img
         src={product.image}
         alt={product.name}
-        className={classes.productImage}
+        className={`${classes.productImage} rounded-lg `}
       />
       <div className="flex justify-between">
         <h6>{product.name}</h6>
-        <img src={stars} width={`96px`} height={"16px"} />
+        <img
+          className="border_radious"
+          src={stars}
+          width={`96px`}
+          height={"16px"}
+        />
       </div>
       <p>{product.price}</p>
     </li>
@@ -20,7 +25,7 @@ export function ProductCard({ product }) {
 }
 export function Menu({ selectedCategory }) {
   return (
-    <ul className={classes.meniues}>
+    <ul className={`${classes.meniues} rounded-lg `}>
       {products[selectedCategory].map((p) => (
         <ProductCard key={p.id} product={p} />
       ))}
