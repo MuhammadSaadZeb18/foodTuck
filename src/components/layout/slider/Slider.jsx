@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import leftImg from "../../../assets/icons/left.png";
 import rightImg from "../../../assets/icons/right.png";
 import ShopProduct from "../shop/ShopProduct";
-import Center from "../../ui/Center";
+import Center from "../../ui/center";
 
 import {
   starterMenu,
