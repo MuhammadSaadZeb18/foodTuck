@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "../container";
-import Center from "../Center";
+import Center from "../center";
 
 import b1 from "../../../assets/brands/b1.png";
 import b2 from "../../../assets/brands/b2.png";

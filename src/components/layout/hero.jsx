@@ -13,7 +13,7 @@ const Hero = () => {
         <div className={classes.heroLayout} id="aboutSec">
           <div className={classes.heroText}>
             <p
-              className="rounded-r-2xl"
+              className="rounded-r-2xl "
               style={{
                 display: "flex",
                 gap: "1rem",

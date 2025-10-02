@@ -38,7 +38,7 @@ const Navbar = () => {
   return (
     <Container>
       <header className={isStict ? "stictic" : ""}>
-        <div className="flex justify-between items-center mb-9">
+        <div className="flex justify-between items-center mb-9 ">
           <div>
             <img alt="logo here" src={lgo} />
           </div>

@@ -31,7 +31,7 @@ const MainFooter = () => {
               </div>
 
               <div className={classes.column}>
-                <h3>Explore</h3>
+                <h3 className="text-[18px]">Explore</h3>
                 <ul>
                   <li>&gt; Home</li>
                   <li>&gt; About us</li>
@@ -43,7 +43,7 @@ const MainFooter = () => {
               </div>
 
               <div className={classes.column}>
-                <h3>Contact us</h3>
+                <h3 className="text-[18px]">Contact us</h3>
                 <ul>
                   <li>📍 Kolkata India , 3rd Floor, Office 45</li>
                   <li>📞 00965 - 96659986</li>
