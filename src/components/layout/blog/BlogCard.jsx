@@ -51,7 +51,7 @@ const BlogCard = ({ img, title, aut, id }) => {
         </button>
       </Link>
       <div
-        className={`bg-[#FF9F0D] rounded-b-xl text-white  absolute top-6 left-6 p-3`}
+        className={`bg-[#FF9F0D] rounded-b-xl text-white  absolute top-6 left-6 p-3  transition ease-in duration-100 hover:bg-white hover:text-black`}
       >
         <p>{formattedEdit}</p>
       </div>

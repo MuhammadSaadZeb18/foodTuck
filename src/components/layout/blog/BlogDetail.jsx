@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { blogs } from "../../layout/blog/blogsData";
 import classes from "../blog/blog.module.css";
-
+import { motion } from "framer-motion";
 const BlogDetail = () => {
   const { id } = useParams();
   const blog = blogs.find((b) => b.id === id);
@@ -54,25 +54,37 @@ const BlogDetail = () => {
         ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
         eirmod tempor invidunt ut labore et dolore magna aliquyam erat
       </p>
-
-      {/* Author */}
-      <section
-        className={` rounded-4xl flex flex-col justify-center items-center bg-gray-100 p-5 hover:bg-gray-300 transition duration-100 ease-in`}
+    
+      <motion.section
+        className="relative rounded-4xl flex flex-col justify-center items-center bg-gray-100 p-5 overflow-hidden cursor-pointer"
+        whileHover="hover"
+        initial="rest"
+        animate="rest"
       >
-        <img
-          src={productDetail.author.img}
-          alt={productDetail.author.name}
-          className="w-30 h-28 rounded-full"
+        {/* Animated gray overlay */}
+        <motion.span
+          className="absolute inset-0 bg-gray-300 z-0"
+          variants={{
+            rest: { x: "100%", y: "-100%" }, // hidden top-right
+            hover: { x: "0%", y: "0%" }, // slide into place
+          }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
         />
-        <div className="flex flex-col justify-center items-center">
-          <h6 className="text-[18px] ">{productDetail.author.name}</h6>
+
+        {/* Content above overlay */}
+        <div className="relative z-10 flex flex-col justify-center items-center">
+          <img
+            src={productDetail.author.img}
+            alt={productDetail.author.name}
+            className="w-30 h-28 rounded-full mb-3"
+          />
+          <h6 className="text-[18px]">{productDetail.author.name}</h6>
           <p className={`${classes.role} text-[#f39c12]`}>
             {productDetail.author.role}
           </p>
-          <p>{productDetail.author.bio}</p>
+          <p className="text-center">{productDetail.author.bio}</p>
         </div>
-      </section>
-
+      </motion.section>
       {/* Related Blogs */}
       <section className={classes.related}>
         <h2>Related Posts</h2>

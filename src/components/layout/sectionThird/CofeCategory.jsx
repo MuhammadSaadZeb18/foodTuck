@@ -4,7 +4,7 @@ import Center from "../../ui/center";
 import classes from "../../layout/sectionThird/cofeCate.module.css";
 import CofeProduct from "./CofeProduct";
 import cofeImg from "../../../assets/cofecup.png";
-
+import SecAnimation from "../../ui/SecAnimation";
 const products = [
   [
     {
@@ -52,7 +52,8 @@ const CofeCategory = () => {
           pharetra dictum neque massa congue
         </p>
       </Center>
-      <div className={classes.cofeCategoryLayout}>
+
+      <SecAnimation classes={classes.cofeCategoryLayout}>
         <ul className={classes.cofesWraper}>
           {products[0].map((item, index) => (
             <CofeProduct
@@ -72,7 +73,10 @@ const CofeCategory = () => {
             />
           ))}
         </ul>
-      </div>
+      </SecAnimation>
+      {/* <div className={classes.cofeCategoryLayout}> */}
+
+      {/* </div> */}
     </Container>
   );
 };

@@ -1,6 +1,6 @@
 .layout {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   @media (max-width: 1000px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
